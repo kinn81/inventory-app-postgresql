@@ -6,6 +6,10 @@ var logger = require("morgan");
 const expressLayouts = require("express-ejs-layouts");
 const session = require("express-session");
 
+process.on("unhandledRejection", (reason, promise) => {
+  console.log("Unhandled Rejection at:", promise, "reason:", reason);
+});
+
 var indexRouter = require("./routes/index");
 var app = express();
 
