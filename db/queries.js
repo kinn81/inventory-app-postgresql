@@ -3,7 +3,7 @@ const pool = require("./pool");
 async function getGameCount() {
   console.log("Attempting to get game count");
   try {
-    const { rows } = await db.query("SELECT COUNT(*) FROM games");
+    const { rows } = await pool.query("SELECT COUNT(*) FROM games");
     console.log("Game count query successful:", rows[0].count);
     return rows[0].count;
   } catch (err) {
