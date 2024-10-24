@@ -12,7 +12,7 @@ function getLogin(req, res, next) {
 
 function postLogin(req, res, next) {
   const password = req.body.password;
-  if (password === "theSecretPassword") {
+  if (password === "") {
     req.session.isAuthenticated = true;
     res.redirect("/games");
   } else res.render("layouts/login", { error: "Invalid password!" });
