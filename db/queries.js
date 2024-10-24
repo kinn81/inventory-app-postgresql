@@ -10,8 +10,6 @@ async function getGameCount() {
     console.error("Error in getGameCount:", err);
     throw err;
   }
-  //const { rows } = await pool.query("SELECT COUNT(*) FROM games");
-  //return rows[0].count;
 }
 async function getGenreCount() {
   const { rows } = await pool.query("SELECT COUNT(*) FROM genres");

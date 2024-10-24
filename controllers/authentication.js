@@ -6,9 +6,6 @@ function isAuthenticated(req, res, next) {
   }
 }
 
-//Authentication
-//router.get("/login", authentication.getLogin);
-//router.post("/login", authentication.postLogin);
 function getLogin(req, res, next) {
   res.render("layouts/login");
 }
